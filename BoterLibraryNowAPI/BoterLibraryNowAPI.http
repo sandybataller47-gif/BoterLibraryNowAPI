@@ -1,0 +1,6 @@
+@BoterLibraryNowAPI_HostAddress = http://localhost:5218
+
+GET {{BoterLibraryNowAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
