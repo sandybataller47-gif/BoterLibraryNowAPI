@@ -5,7 +5,8 @@ ENV ASPNETCORE_URLS=https//+:8080
 
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 WORKDIR /src
-EXPOSE . .
+COPY . .
+RUN dotnet restore "BoterLibraryNowAPI.csproj"
 RUN dotnet publish -c Release -o /app/out
 
 
