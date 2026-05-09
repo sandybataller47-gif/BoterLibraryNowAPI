@@ -12,7 +12,7 @@ RUN dotnet publish "BoterLibraryNowAPI/BoterLibraryNowAPI.csproj" -c Release -o 
 
 FROM base AS final
 WORKDIR /app
-COPY __from=build /app/out
+COPY --from=build /app/out .
 ENTRYPOINT ["dotnet","BoterLibraryNowAPI.dll"]s
 
 
